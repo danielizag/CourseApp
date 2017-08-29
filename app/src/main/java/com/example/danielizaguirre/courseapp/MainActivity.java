@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Instantiation
-        EditText userET;
-        EditText passwordET;
+        final EditText userET;
+        final EditText passwordET;
         Button loginBut;
         final TextView responseTV;
         final User myUser = new User();
@@ -27,22 +27,29 @@ public class MainActivity extends AppCompatActivity {
         loginBut = (Button) findViewById(R.id.loginButton);
         responseTV = (TextView) findViewById(R.id.responseTV);
 
-        String user;
-        String pass;
-        final String response;
+        final String[] user = new String[1];
+        final String[] pass = new String[1];
+        final String[] response = new String[1];
 
-        user = userET.getText().toString();
-        pass = passwordET.getText().toString();
+        user[0] = userET.getText().toString();
+        pass[0] = passwordET.getText().toString();
 
-        myUser.setUsername(user);
-        myUser.setPassword(pass);
+        myUser.setUsername(user[0]);
+        myUser.setPassword(pass[0]);
 
-        response = myUser.responseMessage();
+        response[0] = myUser.toString();
 
         loginBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                responseTV.setText(response);
+                user[0] = userET.getText().toString();
+                pass[0] = passwordET.getText().toString();
+
+                myUser.setUsername(user[0]);
+                myUser.setPassword(pass[0]);
+
+                response[0] = myUser.toString();
+                responseTV.setText(response[0]);
             }
         });
 
