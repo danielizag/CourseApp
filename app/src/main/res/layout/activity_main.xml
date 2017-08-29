@@ -12,6 +12,17 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <TextView
+            android:id="@+id/responseTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:text="Will Change onclick"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="397dp" />
+
         <Button
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
@@ -47,15 +58,6 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="82dp" />
 
-        <TextView
-            android:id="@+id/responseTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/loginButton"
-            android:layout_centerHorizontal="true"
-            android:text="Will Change onclick"
-            tools:layout_editor_absoluteX="132dp"
-            tools:layout_editor_absoluteY="397dp" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
